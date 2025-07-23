@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="partner_view_form_replace_parts" model="ir.ui.view">
+        <field name="name">res.partner.form.bacula.replace.parts</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="priority" eval="100" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//notebook/page[@name='contact_addresses']/field[@name='child_ids']"
+                position="attributes"
+            >
+                <attribute
+                    name="context"
+                >{'default_parent_id': active_id, 'default_street': street, 'default_street2': street2, 'default_city': city, 'default_state_id': state_id, 'default_zip': zip, 'default_country_id': country_id, 'default_lang': lang, 'default_user_id': user_id, 'default_type': 'contact'}</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
