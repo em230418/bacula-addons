@@ -1,6 +1,6 @@
 {
     "name": """CRM modifications for Bacula Systems""",
-    "version": "16.0.0.1.0",
+    "version": "16.0.0.2.0",
     "author": "IT-Projects LLC, Eugene Molotov",
     "support": "it@it-projects.info",
     "website": "https://github.com/it-projects-llc/bacula-addons",
@@ -8,6 +8,9 @@
     "depends": [
         "crm",
     ],
-    "data": [],
+    "data": [
+        "views/mail_activity_views.xml",
+        "views/digest_views.xml",
+    ],
     "demo": [],
 }
