@@ -86,7 +86,9 @@ WHERE create_date >= NOW() - INTERVAL '1 YEAR'
             )
             for index, user_id in enumerate(sales_user_ids):
                 kpi_values = kpis[index]
-                kpi_values["kpi_action"] = None
+                kpi_values[
+                    "kpi_action"
+                ] = f"bacula2_crm.user_mail_activity_action&active_id={user_id}"
                 try:
                     compute_value = digest._compute_sale_activity_report_value(user_id)
                 except AccessError:

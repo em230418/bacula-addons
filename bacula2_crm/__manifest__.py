@@ -9,6 +9,7 @@
         "crm",
     ],
     "data": [
+        "views/mail_activity_views.xml",
         "views/digest_views.xml",
     ],
     "demo": [],
