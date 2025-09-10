@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="mail_notification_layout">
+<html t-att-lang="lang">
+<head>
+    <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+</head>
+<body style="font-family:Verdana, Arial,sans-serif; color: #454748;">
+<t t-set="subtype_internal" t-value="subtype and subtype.internal" />
+<!-- HEADER -->
+<t t-call="mail.notification_preview" />
+<div style="max-width: 900px; width: 100%;">
+<!-- CONTENT -->
+<div t-out="message.body" style="font-size: 13px;" />
+</div>
+</body></html>
+    </template>
+</odoo>
