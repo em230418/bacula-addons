@@ -9,4 +9,11 @@ class AccountMove(models.Model):
         res["context"][
             "default_email_layout_xmlid"
         ] = "bacula2_mail.mail_notification_layout"
-        return
+        return res
+
+    def action_invoice_sent(self):
+        res = super().action_invoice_sent()
+        res["context"][
+            "default_email_layout_xmlid"
+        ] = "bacula2_mail.mail_notification_layout"
+        return res
